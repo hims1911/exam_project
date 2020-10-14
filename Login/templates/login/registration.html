@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ <form action="instruction" method="post">
+         {% csrf_token %}
+
+    <div class="container">
+       <div class="content">
+           <div class="row">
+               <div class="card bg-light mb-3 row" style="margin-top:30px;margin-bottom:20px;margin-left:325px;margin-right:100px;align:align-items-center;">
+                   <div class="card-header" >
+                       <center><b>REGISTRATION FORM</b></center>
+                   </div>
+                   <div class="card-body">
+               <div class="form" style="margin-left:50px;margin-right:50px;display:my-auto ; align:align-items-center;">
+
+                   <div class="row">
+                      <div class="">
+                          <label for="f_name">First name</label>
+                          <input type="text" class="form-control" id="f_name" placeholder="First name" name="f_name" maxlength="100" required>
+                      </div>
+                     <div class="col">
+                        <label for="l_name">Last name</label>
+                        <input type="text" class="form-control" id="l_name" placeholder="Last name" name="l_name" maxlength="100" required>
+                     </div>
+                 </div>
+                  <div class="row">
+                    <label for="username">Email</label>
+                   <div class="input-group">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2" >@</span>
+                     </div>
+                      <input type="text" class="form-control" id="username" placeholder="Username" name="username" maxlength="100" aria-describedby="inputGroupPrepend2" required>
+                   </div>
+                  </div>
+                   <div class="form-group row">
+                      <label for="password">Password</label>
+                     <input type="password" class="form-control" id="password" placeholder="Password" name="password" maxlength="100">
+                   </div>
+                   <div class="form-group row">
+                      <label for="cn_password">Confirm Password</label>
+                      <input type="password" class="form-control" id="cn_password" placeholder="Password" name="cn_password" maxlength="100">
+                   </div>
+                   <div class="row">
+                     <label for="city">City</label>
+                     <input type="text" class="form-control" id="city" placeholder="City" name="city" maxlength="100" required>
+                   </div>
+                   <div class="row">
+                     <label for="phone_number">Mobile Number </label>
+                     <input type="number" class="form-control" id="phone_number" placeholder="Enter Mobile Number" name="phone_number" maxlength= "12" required>
+                   </div>
+                   <div class="row">
+                     <label for="prn_number">PRN Number</label>
+                     <input type="number" class="form-control" id="prn_number" placeholder="Enter PRN Number" name="prn_number" maxlength="20" required>
+                   </div>
+
+                    <h style="margin-right:1px">Gender</h>
+                   <div class="form-check row" >
+                     <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Male
+                    </label>
+                   </div>
+                   <div class="form-check row">
+                     <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="female">
+                     <label class="form-check-label" for="exampleRadios2">
+                       Female
+                     </label>
+                   </div>
+                   <div class="form-check row">
+                     <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="others" >
+                     <label class="form-check-label" for="exampleRadios3">
+                         Others
+                     </label>
+                   </div>
+                   <div class="form-group row ">
+                     <label for="clg_name">Select College Name</label>
+                      <select class="form-control" id="clg_name" name="clg_name">
+                          <option>Select College Name</option>
+                          <option>Bharti Vidyapeeth Institute of Management and Information Technology, Belapur.</option>
+                          <option>Chikitsak Samuha's S. S. & L. S. Patkar College, Goregoan. </option>
+                          <option>N. G. Acharya & D. K. Marathe College of Arts, Science & Commerce, Chembur. </option>
+                          <option>Karmaveer Bhaurao Patil College, Vashi.</option>
+                          <option>S. P. N. Doshi Women's College,Ghatkopar.</option>
+                      </select>
+                   </div>
+                     <button class="btn btn-success" type="submit">Sign Up</button>
+               </div>
+           </div>
+       </div>
+    </div>
+       </div>
+    </div>
+  </form>
+</body>
+</html>

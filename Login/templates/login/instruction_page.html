@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instruction_page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+ <form action="exams" method= "post" >
+     {%csrf_token %}
+      <div class="container">
+          <div class="content">
+             <div class="row">
+               <div class="card bg-light mb-3 row" style="margin-top:30px;margin-bottom:20px;margin-left:325px;margin-right:100px;align:align-items-center;">
+                   <div class="card-header" >
+                       <center style="font-weight:bold;font-size:20px;"> INSTRUCTION PAGE</center>
+                       <a class="nav-item nav-link active" href="/Login" style="color:blue;font-weight:bold;font-size:15px;margin-left:500px;">LOGOUT</a>
+                   </div>
+                   <div class="card-body" style="padding-top:30px;padding-bottom:50px;padding-left:30px;padding-right:200px">
+
+                        <center><p style="text-align:left">
+                                            1) There are total 50 questions in exam.<br>
+                                            a. 25 Questions of Aptitude.  <br>
+                                            b. 25 Questions of Technical. <br>
+                                            2) There are Two Section in exam. <br>
+                                            c. Section 1 is Aptitude.- 25 questions. <br>
+                                            d. Section 2 is Technical.- 25 questions. <br>
+                                            3) Duration of exam is 60 minutes. <br>
+                                            4) Every question carries 2 marks and total 100 marks <br>
+                                            5) There is no negative marking. <br>
+                                            6) Eligibility for passing is 60 marks. <br>
+                                            7) Press submit button after completion of exam.<br></p>
+                        </center>
+                            <button class="btn btn-success" type="submit" style="margin-top:15px;">START TEST</button>
+                   </div>
+               </div>
+             </div>
+          </div>
+      </div>
+ </form>
+</body>
+</html>

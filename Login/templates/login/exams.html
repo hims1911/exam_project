@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exams</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<script>
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var hour = 60 *1 ,
+        display = document.querySelector('#time');
+    startTimer(hour, display);
+};
+</script>
+ <form action="submit" method="get">
+              {% csrf_token %}
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top:15px;margin-left:2px;margin-right:5px;margin-bottom:10px;">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="padding-left:60px;padding-top:8px;padding-bottom:8px;">
+          <div class="navbar-nav" >
+
+            <a class="nav-item nav-link active" href="exams" style="padding-left:60px;padding-right:20px;">APTITUDE SECTON </a>
+            <a class="nav-item nav-link active " href="technical" style="padding-left:50px;padding-right:20px;">TECHNICAL SECTION </a>
+            <a class="nav-item nav-link active" href="submit" style="padding-left:50px;padding-right:20px;">SUBMIT</a>
+               <div style="padding-top:8px; padding-bottom :8px ;padding-left:600px;color:white ;font-weight:bold ;"> Time :<span id="time"> 01:00</span></div>
+              <a class="nav-item nav-link active" href="/Login" style="padding-left:100px;">LOGOUT</a>
+
+          </div>
+        </div>
+      </nav>
+         <div class="container">
+           <div class="content">
+               <div class="row">
+                 <div class="card bg-light mb-3 row" style="margin-top:30px;margin-bottom:20px;margin-left:100px;margin-right:100px;align:align-items-center;">
+                     <div class="card-body" style="padding-top:30px;padding-bottom:50px;padding-left:30px;padding-right:150px">
+                          <center><p style="text-align:left">
+                            1. A sum of money at simple interest amounts to Rs. 815 in 3 years and to Rs. 854 in 4 years. The sum is: <br>
+                             A.	Rs. 650<br>
+                             B.	Rs. 690<br>
+                             C.	Rs. 698<br>
+                             D.	Rs. 700<br> <br>
+                            2. Mr. Thomas invested an amount of Rs. 13,900 divided in two different schemes A and B at the simple interest rate of 14% p.a. and 11% p.a. respectively. If the total amount of simple interest earned in 2 years be Rs. 3508, what was the amount invested in Scheme B?<br>
+                            A.	Rs. 6400<br>
+                            B.	Rs. 6500<br>
+                            C.	Rs. 7200<br>
+                            D.	Rs. 7500<br>
+                            E .None of these<br></p></center>
+                     </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+ </form>
+</body>
+</html>
